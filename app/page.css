@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+}
+
+.App {
+  background: #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.AppTitle {
+  color: #ffffff;
+  font-size: 2rem;
+  text-align: center;
+  margin: 20px;
+  font-family: "Outfit", sans-serif;
+}
+
+.AnimalSelectorGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards por linha */
+  gap: 50px; /* espaçamento entre os cards */
+  max-width: 1200px;
+}

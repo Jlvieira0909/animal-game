@@ -55,7 +55,6 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 50px;
-  max-width: 1200px;
   margin-bottom: 2em;
 }
 
@@ -69,7 +68,7 @@
 }
 
 .AnimalCardContainer:hover {
-  transform: scale(1.05);
+  transform: scale(1.05) rotate(-4deg);
 }
 
 .PopupOverlay {

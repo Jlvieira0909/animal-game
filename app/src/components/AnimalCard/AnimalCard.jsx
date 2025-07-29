@@ -23,7 +23,7 @@ export default function AnimalCard(props) {
         <Image
           className="SizebichoLogo"
           alt="Cool Logo for a silly game"
-          src={testIMG}
+          src=""
           width={160} // Ajuste conforme necessário
           height={50} // Ajuste conforme necessário
         />

@@ -1,117 +1,58 @@
 "use client";
 
 import React, { useState } from "react";
-import { StaticImageData } from "next/image";
 import "./page.css";
 import AnimalCard from "./src/components/AnimalCard/AnimalCard";
-import modelPhoto from "./src/images/Model.png";
-import loadingImage1 from "./src/images/TestAnimation01.png";
-import loadingImage2 from "./src/images/TestAnimation02.png";
-import loadingImage3 from "./src/images/TestAnimation03.png";
+
+// Caminhos absolutos para imagens na pasta public/images
+const modelPhoto = "/images/modelPhoto.png";
+const loadingImage1 = "/images/TestAnimation01.png";
+const loadingImage2 = "/images/TestAnimation02.png";
+const loadingImage3 = "/images/TestAnimation03.png";
+const PhotoAna = "/images/animals/Ana.jpg";
+const PhotoEducavera = "/images/animals/EduCavera.jpg";
+const PhotoJando = "/images/animals/Jando.jpg";
+const PhotoMariaPaula = "/images/animals/MariaPaula.jpg";
+const PhotoVictor = "/images/animals/Victor.jpg";
 
 export default function Home() {
   type Animal = {
     name: string;
-    photo: StaticImageData;
+    photo: string;
     team: string;
-    isActive: boolean; // New property to track active state
+    isActive: boolean;
   };
 
   const [animals, setAnimals] = useState<Animal[]>([
+    { name: "Pedro", photo: modelPhoto, team: "Diretoria", isActive: true },
+    { name: "Marcelo", photo: modelPhoto, team: "Diretoria", isActive: true },
+    { name: "Janderson", photo: PhotoJando, team: "Diretoria", isActive: true },
+    { name: "Daniel", photo: modelPhoto, team: "CS", isActive: true },
+    { name: "Eduardo", photo: PhotoEducavera, team: "Produto", isActive: true },
+    { name: "Lucas", photo: modelPhoto, team: "Produto", isActive: true },
     {
-      name: "Placeholder 1",
+      name: "Victor",
+      photo: PhotoVictor,
+      team: "Produto/Integração",
+      isActive: true,
+    },
+    { name: "Ana", photo: PhotoAna, team: "Revisão", isActive: true },
+    { name: "Luciani", photo: modelPhoto, team: "Modelagem", isActive: true },
+    { name: "Eduardo", photo: modelPhoto, team: "Implantação", isActive: true },
+    { name: "Ludimila", photo: modelPhoto, team: "Marketing", isActive: true },
+    { name: "Allan", photo: modelPhoto, team: "Integração", isActive: true },
+    { name: "Matheus", photo: modelPhoto, team: "Comercial", isActive: true },
+    { name: "Karina", photo: modelPhoto, team: "Comercial", isActive: true },
+    {
+      name: "Maria Gerbati",
       photo: modelPhoto,
-      team: "Placeholder 1",
+      team: "Relacionamento",
       isActive: true,
     },
     {
-      name: "Placeholder 2",
-      photo: modelPhoto,
-      team: "Placeholder 2",
-      isActive: true,
-    },
-    {
-      name: "Placeholder 3",
-      photo: modelPhoto,
-      team: "Placeholder 3",
-      isActive: true,
-    },
-    {
-      name: "Placeholder 4",
-      photo: modelPhoto,
-      team: "Placeholder 4",
-      isActive: true,
-    },
-    {
-      name: "Placeholder 5",
-      photo: modelPhoto,
-      team: "Placeholder 5",
-      isActive: true,
-    },
-    {
-      name: "Placeholder 6",
-      photo: modelPhoto,
-      team: "Placeholder 6",
-      isActive: true,
-    },
-    {
-      name: "Placeholder 7",
-      photo: modelPhoto,
-      team: "Placeholder 7",
-      isActive: true,
-    },
-    {
-      name: "Placeholder 8",
-      photo: modelPhoto,
-      team: "Placeholder 8",
-      isActive: true,
-    },
-    {
-      name: "Placeholder 9",
-      photo: modelPhoto,
-      team: "Placeholder 9",
-      isActive: true,
-    },
-    {
-      name: "Placeholder 10",
-      photo: modelPhoto,
-      team: "Placeholder 10",
-      isActive: true,
-    },
-    {
-      name: "Placeholder 11",
-      photo: modelPhoto,
-      team: "Placeholder 11",
-      isActive: true,
-    },
-    {
-      name: "Placeholder 12",
-      photo: modelPhoto,
-      team: "Placeholder 12",
-      isActive: true,
-    },
-    {
-      name: "Placeholder 13",
-      photo: modelPhoto,
-      team: "Placeholder 13",
-      isActive: true,
-    },
-    {
-      name: "Placeholder 14",
-      photo: modelPhoto,
-      team: "Placeholder 14",
-      isActive: true,
-    },
-    {
-      name: "Placeholder 15",
-      photo: modelPhoto,
-      team: "Placeholder 15",
-      isActive: true,
-    },
-    {
-      name: "Placeholder 16",
-      photo: modelPhoto,
-      team: "Placeholder 16",
+      name: "Maria Paula",
+      photo: PhotoMariaPaula,
+      team: "Financeiro",
       isActive: true,
     },
   ]);
@@ -183,7 +124,7 @@ export default function Home() {
         <div className="LoadingContainer">
           <img
             className="LoadingImage"
-            src={currentLoadingImage.src}
+            src={currentLoadingImage}
             alt="Loading animation"
           />
         </div>

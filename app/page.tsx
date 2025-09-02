@@ -60,12 +60,6 @@ export default function Home() {
       team: "Outbound/Comercial",
       isActive: true,
     },
-    {
-      name: "Maria Paula",
-      photo: PhotoMariaPaula,
-      team: "Financeiro",
-      isActive: true,
-    }, // Caminhos absolutos para imagens na pasta public/images
   ]);
 
   const [selectedAnimal, setSelectedAnimal] = useState<Animal | null>(null);

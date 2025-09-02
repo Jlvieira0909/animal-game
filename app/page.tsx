@@ -18,6 +18,8 @@ const PhotoDaniel = "/images/animals/Daniel.png";
 const PhotoLuci = "/images/animals/Luci.png";
 const PhotoMarcela = "/images/animals/Marcella.png";
 const PhotoPedro = "/images/animals/Pedro.png";
+const PhotoEduardo = "/images/animals/Eduardo.png";
+const PhotoLud = "/images/animals/Lud.png";
 
 export default function Home() {
   type Animal = {
@@ -42,8 +44,13 @@ export default function Home() {
     },
     { name: "Ana", photo: PhotoAna, team: "Revisão", isActive: true },
     { name: "Luciani", photo: PhotoLuci, team: "Modelagem", isActive: true },
-    { name: "Eduardo", photo: modelPhoto, team: "Implantação", isActive: true },
-    { name: "Ludimila", photo: modelPhoto, team: "Marketing", isActive: true },
+    {
+      name: "Eduardo",
+      photo: PhotoEduardo,
+      team: "Implantação",
+      isActive: true,
+    },
+    { name: "Ludimila", photo: PhotoLud, team: "Marketing", isActive: true },
     { name: "Allan", photo: PhotoAllan, team: "Integração", isActive: true },
     { name: "Matheus", photo: modelPhoto, team: "Comercial", isActive: true },
     { name: "Karina", photo: modelPhoto, team: "Comercial", isActive: true },

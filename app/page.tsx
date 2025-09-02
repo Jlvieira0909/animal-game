@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import "./page.css";
 import AnimalCard from "./src/components/AnimalCard/AnimalCard";
 
-// Caminhos absolutos para imagens na pasta public/images
 const modelPhoto = "/images/modelPhoto.png";
 const loadingImage1 = "/images/TestAnimation01.png";
 const loadingImage2 = "/images/TestAnimation02.png";
@@ -14,6 +13,11 @@ const PhotoEducavera = "/images/animals/EduCavera.jpg";
 const PhotoJando = "/images/animals/Jando.jpg";
 const PhotoMariaPaula = "/images/animals/MariaPaula.jpg";
 const PhotoVictor = "/images/animals/Victor.jpg";
+const PhotoAllan = "/images/animals/Allan.png";
+const PhotoDaniel = "/images/animals/Daniel.png";
+const PhotoLuci = "/images/animals/Luci.png";
+const PhotoMarcela = "/images/animals/Marcella.png";
+const PhotoPedro = "/images/animals/Pedro.png";
 
 export default function Home() {
   type Animal = {
@@ -24,10 +28,10 @@ export default function Home() {
   };
 
   const [animals, setAnimals] = useState<Animal[]>([
-    { name: "Pedro", photo: modelPhoto, team: "Diretoria", isActive: true },
+    { name: "Pedro", photo: PhotoPedro, team: "Diretoria", isActive: true },
     { name: "Marcelo", photo: modelPhoto, team: "Diretoria", isActive: true },
     { name: "Janderson", photo: PhotoJando, team: "Diretoria", isActive: true },
-    { name: "Daniel", photo: modelPhoto, team: "CS", isActive: true },
+    { name: "Daniel", photo: PhotoDaniel, team: "CS", isActive: true },
     { name: "Eduardo", photo: PhotoEducavera, team: "Produto", isActive: true },
     { name: "Lucas", photo: modelPhoto, team: "Produto", isActive: true },
     {
@@ -37,16 +41,16 @@ export default function Home() {
       isActive: true,
     },
     { name: "Ana", photo: PhotoAna, team: "Revisão", isActive: true },
-    { name: "Luciani", photo: modelPhoto, team: "Modelagem", isActive: true },
+    { name: "Luciani", photo: PhotoLuci, team: "Modelagem", isActive: true },
     { name: "Eduardo", photo: modelPhoto, team: "Implantação", isActive: true },
     { name: "Ludimila", photo: modelPhoto, team: "Marketing", isActive: true },
-    { name: "Allan", photo: modelPhoto, team: "Integração", isActive: true },
+    { name: "Allan", photo: PhotoAllan, team: "Integração", isActive: true },
     { name: "Matheus", photo: modelPhoto, team: "Comercial", isActive: true },
     { name: "Karina", photo: modelPhoto, team: "Comercial", isActive: true },
     {
-      name: "Maria Gerbati",
-      photo: modelPhoto,
-      team: "Relacionamento",
+      name: "Marcela",
+      photo: PhotoMarcela,
+      team: "Outbound/Comercial",
       isActive: true,
     },
     {
@@ -54,7 +58,7 @@ export default function Home() {
       photo: PhotoMariaPaula,
       team: "Financeiro",
       isActive: true,
-    },
+    }, // Caminhos absolutos para imagens na pasta public/images
   ]);
 
   const [selectedAnimal, setSelectedAnimal] = useState<Animal | null>(null);
@@ -119,7 +123,7 @@ export default function Home() {
 
   return (
     <div className="App">
-      <h1 className="AppTitle">Animal Game</h1>
+      <h1 className="AppTitle">Sizebicho</h1>
       {isLoading ? (
         <div className="LoadingContainer">
           <img

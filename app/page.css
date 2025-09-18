@@ -26,6 +26,7 @@
 
 .NumberSelectorContainer {
   outline: 1px solid #ffffff;
+  background: #000000;
   border-radius: 99999px;
   margin-bottom: 2em;
   width: 350px;
@@ -109,8 +110,8 @@
 }
 
 .LoadingImage {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   animation: fadeIn 1s ease-in-out infinite;
 }
 

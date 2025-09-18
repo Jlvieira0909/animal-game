@@ -4,22 +4,23 @@ import React, { useState } from "react";
 import "./page.css";
 import AnimalCard from "./src/components/AnimalCard/AnimalCard";
 
-const modelPhoto = "/images/modelPhoto.png";
 const loadingImage1 = "/images/TestAnimation01.png";
-const loadingImage2 = "/images/TestAnimation02.png";
-const loadingImage3 = "/images/TestAnimation03.png";
 const PhotoAna = "/images/animals/Ana.jpg";
 const PhotoEducavera = "/images/animals/EduCavera.jpg";
 const PhotoJando = "/images/animals/Jando.jpg";
-const PhotoMariaPaula = "/images/animals/MariaPaula.jpg";
 const PhotoVictor = "/images/animals/Victor.jpg";
 const PhotoAllan = "/images/animals/Allan.png";
-const PhotoDaniel = "/images/animals/Daniel.png";
+const PhotoDaniel = "/images/animals/Daniel.jpg";
 const PhotoLuci = "/images/animals/Luci.png";
 const PhotoMarcela = "/images/animals/Marcella.png";
 const PhotoPedro = "/images/animals/Pedro.png";
 const PhotoEduardo = "/images/animals/Eduardo.png";
 const PhotoLud = "/images/animals/Lud.png";
+const PhotoLucas = "/images/animals/Lucas.jpg";
+const PhotoMarcelo = "/images/animals/Marcelo.jpg";
+const PhotoMatheus = "/images/animals/Matheus.jpg";
+const PhotoMayla = "/images/animals/Mayla.jpg";
+const PhotoKarina = "/images/animals/Karina.jpg";
 
 export default function Home() {
   type Animal = {
@@ -31,11 +32,11 @@ export default function Home() {
 
   const [animals, setAnimals] = useState<Animal[]>([
     { name: "Pedro", photo: PhotoPedro, team: "Diretoria", isActive: true },
-    { name: "Marcelo", photo: modelPhoto, team: "Diretoria", isActive: true },
+    { name: "Marcelo", photo: PhotoMarcelo, team: "Diretoria", isActive: true },
     { name: "Janderson", photo: PhotoJando, team: "Diretoria", isActive: true },
     { name: "Daniel", photo: PhotoDaniel, team: "CS", isActive: true },
     { name: "Eduardo", photo: PhotoEducavera, team: "Produto", isActive: true },
-    { name: "Lucas", photo: modelPhoto, team: "Produto", isActive: true },
+    { name: "Lucas", photo: PhotoLucas, team: "Produto", isActive: true },
     {
       name: "Victor",
       photo: PhotoVictor,
@@ -52,8 +53,14 @@ export default function Home() {
     },
     { name: "Ludimila", photo: PhotoLud, team: "Marketing", isActive: true },
     { name: "Allan", photo: PhotoAllan, team: "Integração", isActive: true },
-    { name: "Matheus", photo: modelPhoto, team: "Comercial", isActive: true },
-    { name: "Karina", photo: modelPhoto, team: "Comercial", isActive: true },
+    { name: "Matheus", photo: PhotoMatheus, team: "Comercial", isActive: true },
+    { name: "Karina", photo: PhotoKarina, team: "Comercial", isActive: true },
+    {
+      name: "Mayla",
+      photo: PhotoMayla,
+      team: "Inboud/Comercial",
+      isActive: true,
+    },
     {
       name: "Marcela",
       photo: PhotoMarcela,
@@ -72,7 +79,24 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
   const [currentLoadingImage, setCurrentLoadingImage] = useState(loadingImage1);
 
-  const loadingImages = [loadingImage1, loadingImage2, loadingImage3];
+  const loadingImages = [
+    PhotoAllan,
+    PhotoAna,
+    PhotoDaniel,
+    PhotoEduardo,
+    PhotoEducavera,
+    PhotoJando,
+    PhotoKarina,
+    PhotoLucas,
+    PhotoLuci,
+    PhotoLud,
+    PhotoMarcela,
+    PhotoMarcelo,
+    PhotoMatheus,
+    PhotoMayla,
+    PhotoPedro,
+    PhotoVictor,
+  ];
 
   const toggleAnimalActiveState = (index: number) => {
     setAnimals((prevAnimals) =>
